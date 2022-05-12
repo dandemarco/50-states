@@ -32,7 +32,7 @@ export default {
         }
     },
     methods: {
-        visitedChanged() {
+        updateVisited() {
             this.$emit('update-visited', this.state.name, this.visited)
         }
     }
