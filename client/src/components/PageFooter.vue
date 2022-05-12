@@ -9,6 +9,11 @@
             <span class="nav-link">
                 <router-link to="/about">About this site</router-link>
             </span>
+
+            <!--LAB: Add a router-link to the PageFooter.vue component so a user can visit the new page. -->
+            <span class="nav-link">
+                <router-link to="/visited">States visited</router-link>
+            </span>
         
         </div>
 

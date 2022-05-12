@@ -11,6 +11,14 @@ router.get('/states', function(req, res, next) {
     .catch(err => next(err))
 })
 
+//LAB: create an api route that gets all the visited states
+router.get('/visited', function(req, res, next) {
+    States.findAll({ order: ['visited']}).then( states => {
+        return res.json(states)
+    })
+    .catch(err => next(err))
+})
+
 //get all info about one state
 router.get('/state/:name', function(req, res, name) {
     let stateName = req.params.name

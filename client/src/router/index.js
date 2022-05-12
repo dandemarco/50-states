@@ -3,6 +3,7 @@ import StateList from '@/components/StateList'
 import AboutSite from '@/components/AboutSite'
 import StateMap from '@/components/StateMap'
 import NotFound from '@/components/NotFound'
+import StatesVisited from '@/components/StatesVisited'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -26,6 +27,13 @@ export default createRouter({
             path: '/:pathMatch(.*)*',   //match anything that's not one of the previous routes
             name: 'NotFound',
             component: NotFound
-        }
+        },
+
+        //LAB: update the router configuration to create a new route to the states visited page. You can use the URL path of your choice.
+        {
+            path: '/visited',   
+            name: 'StatesVisited',
+            component: StatesVisited
+        },
     ]
 })
