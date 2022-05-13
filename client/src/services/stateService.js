@@ -23,9 +23,9 @@ export default {
 
     //LAB: add a function to the StateService.js file that will make a request to your new API route.
 
-    getVisited(stateName) {
-        return axios.get('/api/visited/' + stateName).then( response => {
+    getVisited() {
+        return axios.get('/api/visited/').then ( response => {
             return response.data
         })
-    }
+    },
 }

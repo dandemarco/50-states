@@ -13,8 +13,8 @@ router.get('/states', function(req, res, next) {
 
 //LAB: create an api route that gets all the visited states
 router.get('/visited', function(req, res, next) {
-    States.findAll({ order: ['visited']}).then( states => {
-        return res.json(states)
+    States.findAll({ order: ['visited']}).then( visitedStates => {
+        return res.json(visitedStates)
     })
     .catch(err => next(err))
 })
